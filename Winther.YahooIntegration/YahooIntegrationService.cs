@@ -2,9 +2,9 @@
 {
     public class YahooIntegrationService
     {
-        private const string EndpointFormat = "https://https://query.yahooapis.com/v1/public/yql?q={0}";
+        private const string Endpoint = "https://https://query.yahooapis.com/v1/public/yql";
 
-        public YahooIntegrationService()
+        public YahooIntegrationService(string clientId, string clientSecret)
         {
         }
     }
