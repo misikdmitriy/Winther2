@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Specialized;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using Winther.YahooIntegration;
 
 namespace Winther.Gui
 {
@@ -23,6 +16,27 @@ namespace Winther.Gui
         public MainWindow()
         {
             InitializeComponent();
+
+            string clientId, clientSecret;
+
+            using (var file = File.OpenText("keys.json"))
+            using (var reader = new JsonTextReader(file))
+            {
+                var jObject = (JObject)JToken.ReadFrom(reader);
+                clientId = jObject[nameof(clientId)].ToString();
+                clientSecret = jObject[nameof(clientSecret)].ToString();
+            }
+            var yahooIntegrationService = new YahooIntegrationService(clientId, clientSecret);
+            var @params = new NameValueCollection
+            {
+                { "client_id", clientId },
+                { "redirect_uri", "oob" },
+                { "response_type", "code" },
+            };
+            var task = Task.Run(async() => await yahooIntegrationService.Send(@params));
+
+            var result = task.Result;
+            var str = result.Content.ReadAsStringAsync().Result;
         }
     }
 }

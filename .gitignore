@@ -241,3 +241,4 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 /Winther.YahooIntegration/keys.json
+/Winther.Gui/keys.json

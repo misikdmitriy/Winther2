@@ -45,7 +45,10 @@
     <Compile Include="YahooIntegrationService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="keys.json" />
+    <ProjectReference Include="..\Winther.Domain\Winther.Domain.csproj">
+      <Project>{A5D9B3AB-3FC6-4A10-94B1-5D102926082E}</Project>
+      <Name>Winther.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
