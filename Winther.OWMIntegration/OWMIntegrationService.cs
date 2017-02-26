@@ -1,5 +1,7 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Winther.OWMIntegration.Models;
 
 namespace Winther.OWMIntegration
 {
@@ -14,10 +16,12 @@ namespace Winther.OWMIntegration
             _appId = appId;
         }
 
-        public async Task<HttpResponseMessage> GetCurrentWeatherAsync(int cityId)
+        public async Task<OneForecastDto> GetCurrentWeatherAsync(int cityId)
         {
             var uri = string.Format(Endpoints.GetCurrentWeather, cityId, _appId);
-            return await SendRequest(HttpMethod.Get, uri);
+            var response = await SendRequest(HttpMethod.Get, uri);
+            var content = await response.Content.ReadAsStringAsync();
+            return JsonConvert.DeserializeObject<OneForecastDto>(content);
         }
 
         private async Task<HttpResponseMessage> SendRequest(HttpMethod httpMethod, string uri)

@@ -35,8 +35,6 @@ namespace Winther.Gui
             var weatherResponse = Task.Run(async() => await service.GetCurrentWeatherAsync(city.Id));
 
             var result = weatherResponse.Result;
-
-            var content = result.Content.ReadAsStringAsync().Result;
         }
     }
 }

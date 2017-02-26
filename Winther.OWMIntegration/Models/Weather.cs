@@ -1,9 +1,18 @@
-﻿namespace Winther.OWMIntegration.Models
+﻿using Newtonsoft.Json;
+
+namespace Winther.OWMIntegration.Models
 {
     public class Weather
     {
-        public int Id { get; set; }
-        public string Main { get; set; }
-        public string Description { get; set; }
+        [JsonProperty("temp")]
+        public double Temperature { get; set; }
+        [JsonProperty("pressure")]
+        public double Pressure { get; set; }
+        [JsonProperty("humidity")]
+        public double Humidity { get; set; }
+        [JsonProperty("temp_min")]
+        public double TemperatureMin { get; set; }
+        [JsonProperty("temp_max")]
+        public double TemperatureMax { get; set; }
     }
 }
