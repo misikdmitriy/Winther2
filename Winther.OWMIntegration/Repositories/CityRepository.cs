@@ -39,8 +39,6 @@ namespace Winther.OWMIntegration.Repositories
 
             using (var file = File.OpenText("city.list.json"))
             {
-                await file.ReadLineAsync(); // ignore first line
-
                 while (!file.EndOfStream)
                 {
                     var line = await file.ReadLineAsync();
