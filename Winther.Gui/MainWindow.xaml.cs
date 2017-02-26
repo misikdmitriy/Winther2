@@ -26,14 +26,16 @@ namespace Winther.Gui
                 clientId = jObject[nameof(clientId)].ToString();
                 clientSecret = jObject[nameof(clientSecret)].ToString();
             }
-            var yahooIntegrationService = new YahooIntegrationService(clientId, clientSecret);
+            var yahooIntegrationService = new YahooIntegrationService();
             var @params = new NameValueCollection
             {
                 { "client_id", clientId },
+                { "client_secret", clientSecret },
                 { "redirect_uri", "oob" },
-                { "response_type", "code" },
+                { "grant_type", "authorization_code"},
+                { "format", "json" }
             };
-            var task = Task.Run(async() => await yahooIntegrationService.Send(@params));
+            var task = Task.Run(async() => await yahooIntegrationService.GetAuthUrl(@params));
 
             var result = task.Result;
             var str = result.Content.ReadAsStringAsync().Result;
