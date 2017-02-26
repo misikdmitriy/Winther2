@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Winther.Gui", "Winther.Gui\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Winther.Domain", "Winther.Domain\Winther.Domain.csproj", "{A5D9B3AB-3FC6-4A10-94B1-5D102926082E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Winther.YahooIntegration", "Winther.YahooIntegration\Winther.YahooIntegration.csproj", "{82528DFB-4BBD-45CE-9F6F-C0526C279ED0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Winther.OWMIntegration", "Winther.OWMIntegration\Winther.OWMIntegration.csproj", "{A425A424-41C3-4DAE-ACCC-BAC08659E746}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{A5D9B3AB-3FC6-4A10-94B1-5D102926082E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5D9B3AB-3FC6-4A10-94B1-5D102926082E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5D9B3AB-3FC6-4A10-94B1-5D102926082E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{82528DFB-4BBD-45CE-9F6F-C0526C279ED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{82528DFB-4BBD-45CE-9F6F-C0526C279ED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{82528DFB-4BBD-45CE-9F6F-C0526C279ED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{82528DFB-4BBD-45CE-9F6F-C0526C279ED0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A425A424-41C3-4DAE-ACCC-BAC08659E746}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A425A424-41C3-4DAE-ACCC-BAC08659E746}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A425A424-41C3-4DAE-ACCC-BAC08659E746}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A425A424-41C3-4DAE-ACCC-BAC08659E746}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

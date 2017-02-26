@@ -104,9 +104,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Winther.YahooIntegration\Winther.YahooIntegration.csproj">
-      <Project>{82528DFB-4BBD-45CE-9F6F-C0526C279ED0}</Project>
-      <Name>Winther.YahooIntegration</Name>
+    <ProjectReference Include="..\Winther.Domain\Winther.Domain.csproj">
+      <Project>{A5D9B3AB-3FC6-4A10-94B1-5D102926082E}</Project>
+      <Name>Winther.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Winther.OWMIntegration\Winther.OWMIntegration.csproj">
+      <Project>{A425A424-41C3-4DAE-ACCC-BAC08659E746}</Project>
+      <Name>Winther.OWMIntegration</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
