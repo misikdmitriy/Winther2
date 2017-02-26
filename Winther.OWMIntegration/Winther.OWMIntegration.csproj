@@ -46,8 +46,11 @@
   <ItemGroup>
     <Compile Include="Models\ApplicationKey.cs" />
     <Compile Include="Models\City.cs" />
+    <Compile Include="Models\Clouds.cs" />
     <Compile Include="Models\Coordinate.cs" />
     <Compile Include="Models\OneForecastDto.cs" />
+    <Compile Include="Models\Rain.cs" />
+    <Compile Include="Models\Snow.cs" />
     <Compile Include="Models\Weather.cs" />
     <Compile Include="Models\Wind.cs" />
     <Compile Include="OWMEndpoints.cs" />
