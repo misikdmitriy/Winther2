@@ -2,7 +2,7 @@
 
 namespace Winther.OWMIntegration.Models
 {
-    public class OneForecastDto
+    public class OneDayForecastDto
     {
         [JsonProperty("main")]
         public Weather Weather { get; set; }

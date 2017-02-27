@@ -10,8 +10,10 @@ namespace Winther.Gui
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow
     {
+        public OneDayForecastDto OneDayForecastDto { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -22,7 +24,7 @@ namespace Winther.Gui
             var service = new OwmIntegrationService(new OwmEndpoints(), ApplicationKey.AppId);
             var weatherResponse = Task.Run(async() => await service.GetCurrentWeatherAsync(city.Id));
 
-            var result = weatherResponse.Result;
+            OneDayForecastDto = weatherResponse.Result;
         }
     }
 }
