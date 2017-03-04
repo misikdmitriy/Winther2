@@ -7,16 +7,14 @@
         xmlns:local="clr-namespace:Winther.Gui"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid DataContext="{Binding ElementName=MyWindow, Path=.}">
+    <Grid DataContext="{Binding ElementName=MyWindow, Path=.}" Margin="100 30">
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        
-        <TextBox Text="{Binding Path=OneDayForecastDto.Weather.Temperature, 
-            Mode=TwoWay, 
-            UpdateSourceTrigger=PropertyChanged}"></TextBox>
+
+        <TextBlock Name="Temperature"></TextBlock>
     </Grid>
 </Window>
