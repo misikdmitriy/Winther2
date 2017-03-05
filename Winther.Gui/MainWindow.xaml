@@ -7,14 +7,12 @@
         xmlns:local="clr-namespace:Winther.Gui"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid DataContext="{Binding ElementName=MyWindow, Path=.}" Margin="100 30">
+    <Grid Margin="100 30">
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-
-        <TextBlock Name="Temperature"></TextBlock>
     </Grid>
 </Window>

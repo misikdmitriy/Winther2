@@ -69,7 +69,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainWindowPresenter.cs" />
+    <Compile Include="Presenters\MainWindowPresenter.cs" />
+    <Compile Include="Presenters\IWindowPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
