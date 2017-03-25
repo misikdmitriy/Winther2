@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-
+using Newtonsoft.Json;
 using Winther.OWMIntegration.Models;
 using Winther.OWMIntegration.Parsers;
 
@@ -42,7 +42,7 @@ namespace Winther.OWMIntegration.Repositories
                 while (!file.EndOfStream)
                 {
                     var line = await file.ReadLineAsync();
-                    var city = CityParser.Parse(line);
+                    var city = JsonConvert.DeserializeObject<City>(line);
 
                     if (condition(city))
                     {

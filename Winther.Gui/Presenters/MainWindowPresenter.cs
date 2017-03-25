@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
-using Winther.OWMIntegration;
+
 using Winther.OWMIntegration.Models;
-using Winther.OWMIntegration.Repositories;
 
 namespace Winther.Gui.Presenters
 {
