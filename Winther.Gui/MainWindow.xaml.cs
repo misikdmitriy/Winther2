@@ -1,9 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System;
 using System.Windows;
-
-using Winther.OWMIntegration;
 using Winther.OWMIntegration.Models;
-using Winther.OWMIntegration.Repositories;
 
 namespace Winther.Gui
 {
@@ -12,12 +9,19 @@ namespace Winther.Gui
     /// </summary>
     public partial class MainWindow
     {
-
         public MainWindow()
         {
             InitializeComponent();
+        }
 
-            
+        private void OnClosed(object sender, EventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        public void UpdateView(OneDayForecastDto forecast)
+        {
+            throw new NotImplementedException();
         }
     }
 }

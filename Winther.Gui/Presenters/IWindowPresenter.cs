@@ -2,8 +2,8 @@
 
 namespace Winther.Gui.Presenters
 {
-    public interface IWindowPresenter<in TModel>
+    public interface IWindowPresenter<in TRequest>
     {
-        Task UpdateAsync(TModel model);
+        Task UpdateAsync(TRequest request);
     }
 }

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
+using Autofac;
+using Winther.Gui.Dependencies;
 
 namespace Winther.Gui
 {
@@ -13,5 +9,10 @@ namespace Winther.Gui
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            var mainWindow = DependencyResolver.Container.Resolve<MainWindow>();
+            mainWindow.Show();
+        }
     }
 }

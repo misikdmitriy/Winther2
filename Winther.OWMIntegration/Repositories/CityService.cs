@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+
 using Newtonsoft.Json;
+
 using Winther.OWMIntegration.Models;
-using Winther.OWMIntegration.Parsers;
 
 namespace Winther.OWMIntegration.Repositories
 {
-    public class CityRepository
+    public class CityService
     {
         private IList<City> CitiesCache { get; }
 
-        public CityRepository()
+        public CityService()
         {
             CitiesCache = new List<City>();
         }

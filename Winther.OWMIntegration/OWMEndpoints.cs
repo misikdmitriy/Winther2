@@ -6,6 +6,13 @@
         public string GetFiveDayForecast { get; private set; }
         public string GetSeveralDaysForecast { get; private set; }
 
+        public OwmEndpoints(string getCurrentWeather, string getFiveDayForecast, string getSeveralDaysForecast)
+        {
+            GetCurrentWeather = getCurrentWeather;
+            GetFiveDayForecast = getFiveDayForecast;
+            GetSeveralDaysForecast = getSeveralDaysForecast;
+        }
+
         public OwmEndpoints()
         {
             GetCurrentWeather = "http://api.openweathermap.org/data/2.5/weather?id={0}&appid={1}";

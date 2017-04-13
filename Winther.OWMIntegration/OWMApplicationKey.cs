@@ -2,13 +2,13 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Winther.OWMIntegration.Models
+namespace Winther.OWMIntegration
 {
-    public class ApplicationKey
+    public class OwmApplicationKey
     {
         public static string AppId { get; }
 
-        static ApplicationKey()
+        static OwmApplicationKey()
         {
             using (var file = File.OpenText("keys.json"))
             using (var reader = new JsonTextReader(file))
